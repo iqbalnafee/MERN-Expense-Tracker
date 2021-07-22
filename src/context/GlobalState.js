@@ -21,4 +21,26 @@ export const GlobalContext = createContext(initialState); //we are bringing Glob
 
 //in order to other components to excess to our store or global state (initial state) we need to have a provider
 
+//provider component
 
+export const GlobalProvider = ({children}) => {
+
+    //children are <Header />
+    //   <Balance />
+    //   <IncomeExpense />
+    //   <TransactionList />
+    //   <AddTransaction />
+
+    const [state,dispatch] = useReducer(AppReducer,initialState);
+
+    return (
+
+        <GlobalContext.Provider value={{
+            transactions:state.transactions
+        }}>
+
+            {children}
+        </GlobalContext.Provider>
+    );
+
+}

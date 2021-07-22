@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+
 
 const IncomeExpense = () => {
+
+    
     return (
         <div className="inc-exp-container">
             <div>

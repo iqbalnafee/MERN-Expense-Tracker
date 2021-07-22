@@ -1,5 +1,7 @@
 import React ,{ createContext,useReducer } from 'react';
 
+import AppReducer from './AppReducer'
+
 //initial State
 const initialState = {
 
@@ -38,6 +40,8 @@ export const GlobalProvider = ({children}) => {
     //useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one.
 
     // const initialState = {count: 0};
+
+    //This reducer function look like our AppReducer
 
     // function reducer(state, action) {
     // switch (action.type) {

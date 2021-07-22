@@ -11,7 +11,29 @@ const initialState = {
         { id: 2, text: 'Salary', amount: 300 },
         { id: 3, text: 'Book', amount: -10 },
         { id: 4, text: 'Camera', amount: 150 }
+    ],
+
+    profileState: [
+        { name:"nafees",email:"test@gmail.com", phone:"00000000" },
     ]
+
+    //if we dont use useReducer we have to handle this multiple states with useState in the following way
+
+    // const GlobalContext = createContext();
+
+    // const GlobalProvider = ({ children }) => {
+    // const [transactions, setTransactions] = useState([]);
+    // const [profileState, setProfileState] = useState([]);
+
+
+    // return (
+    //     <GameContext.Provider value={{ transactions: [transactions, setTransactions], profileState: [profileState, setProfileState] }}>
+    //     {children}
+    //     </GameContext.Provider>
+    // );
+    // };
+
+    // export { GameContext, GameProvider };
 
 };
 
